@@ -1,1 +1,1 @@
-URL: https://speak-clearly.firebaseapp.com/
+URL: https://jsalsman.github.io/speakclearly
