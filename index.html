@@ -197,7 +197,7 @@ function uploadAudio() {
         (window.ActiveXObject) ? req = new ActiveXObject("Microsoft.XMLHTTP") :
         req = false; // cross platform for IE7 or something
 
-    req.open("post", "/");
+    req.open("post", "http://sphinxcapt.org/");
 
     formdata = new FormData();
     formdata.append('url', '');
