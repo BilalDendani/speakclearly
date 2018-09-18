@@ -197,7 +197,7 @@ function uploadAudio() {
         (window.ActiveXObject) ? req = new ActiveXObject("Microsoft.XMLHTTP") :
         req = false; // cross platform for IE7 or something
 
-    req.open("post", "http://sphinxcapt.org/");
+    req.open("post", "https://sphinxcapt.org/");
 
     formdata = new FormData();
     formdata.append('url', '');
@@ -221,7 +221,7 @@ function uploadAudio() {
       document.location = fUrl;
     });
     req.addEventListener('error', function(event) {
-      alert('Unable to upload.');
+      alert('Unable to upload: ' + event);
     });
 
     req.send(formdata);
