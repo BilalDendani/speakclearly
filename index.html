@@ -211,7 +211,7 @@ function uploadAudio() {
     req.addEventListener('load', function(event) {
       document.getElementById('upload').disabled = true;
       var resp = JSON.parse(req.responseText);
-      var fUrl = '/rec/index.html?email='
+      var fUrl = '/?email='
         + escape(document.getElementById('email').value);
       if (resp.prob_good < 50 && resp.feedback != "") {
         fUrl += '&word=' + escape(word) + '&feedback=' + escape(resp.feedback);
