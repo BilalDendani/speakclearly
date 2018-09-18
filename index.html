@@ -211,10 +211,11 @@ function uploadAudio() {
     req.addEventListener('load', function(event) {
       document.getElementById('upload').disabled = true;
       var resp = JSON.parse(req.responseText);
-      var fUrl = '/?email='
+      var fUrl = '/speakclearly?email='
         + escape(document.getElementById('email').value);
       if (resp.prob_good < 50 && resp.feedback != "") {
-        fUrl += '&word=' + escape(word) + '&feedback=' + escape(resp.feedback);
+        fUrl += '&word=' + escape(word) + '&feedback=' +
+	      'https://sphinxcapt.org' + escape(resp.feedback);
       }
       alert('Data sent, parsed response:\n' + req.responseText
             + 'Visiting: ' + fUrl);
