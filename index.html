@@ -197,7 +197,7 @@ function uploadAudio() {
         (window.ActiveXObject) ? req = new ActiveXObject("Microsoft.XMLHTTP") :
         req = false; // cross platform for IE7 or something
 
-    req.open("post", "https://sphinxcapt.org/");
+    req.open("post", "http://sphinxcapt.org/");
 
     formdata = new FormData();
     formdata.append('url', '');
@@ -215,7 +215,7 @@ function uploadAudio() {
         + escape(document.getElementById('email').value);
       if (resp.prob_good < 50 && resp.feedback != "") {
         fUrl += '&word=' + escape(word) + '&feedback=' +
-	      'https://sphinxcapt.org' + escape(resp.feedback);
+	      'http://sphinxcapt.org' + escape(resp.feedback);
       }
       alert('Data sent, parsed response:\n' + req.responseText
             + 'Visiting: ' + fUrl);
